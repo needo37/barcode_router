@@ -1,0 +1,34 @@
+name: HACS Validation
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Validate HACS
+        uses: hacs/action@main
+        with:
+          category: integration
+
+      - name: Check manifest
+        run: |
+          if [ ! -f "custom_components/barcode_router/manifest.json" ]; then
+            echo "::error::manifest.json is missing"
+            exit 1
+          fi
+
+      - name: Validate manifest.json
+        run: |
+          python3 -c "import json; json.load(open('custom_components/barcode_router/manifest.json'))"
