@@ -21,7 +21,7 @@ A Home Assistant custom integration for barcode scanning that automatically dete
 2. Go to **HACS** → **Integrations**
 3. Click the three dots in the top right corner → **Custom repositories**
 4. Add this repository:
-   - Repository: `https://github.com/orbitron/barcode_router`
+   - Repository: `https://github.com/needo37/barcode_router`
    - Category: **Integration**
 5. Click **Add**
 6. Search for "Barcode Router" in HACS
@@ -35,7 +35,7 @@ A Home Assistant custom integration for barcode scanning that automatically dete
 
 ### Manual Installation
 
-1. Download the latest release from the [Releases](https://github.com/orbitron/barcode_router/releases) page
+1. Download the latest release from the [Releases](https://github.com/needo37/barcode_router/releases) page
 2. Extract the `custom_components` folder to your Home Assistant config directory
 3. Restart Home Assistant
 4. Go to **Settings** → **Devices & Services** → **Add Integration**

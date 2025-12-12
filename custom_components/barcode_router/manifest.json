@@ -1,13 +1,13 @@
 {
   "domain": "barcode_router",
   "name": "Barcode Router",
-  "codeowners": ["@orbitron"],
+  "codeowners": ["@needo37"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/orbitron/barcode_router",
+  "documentation": "https://github.com/needo37/barcode_router",
   "integration_type": "system",
   "iot_class": "local_polling",
-  "issue_tracker": "https://github.com/orbitron/barcode_router/issues",
+  "issue_tracker": "https://github.com/needo37/barcode_router/issues",
   "requirements": ["aiohttp>=3.8.0"],
   "version": "1.0.0"
 }
