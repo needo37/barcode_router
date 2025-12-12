@@ -1,5 +1,7 @@
 # Barcode Router Home Assistant Integration
 
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
+
 A Home Assistant custom integration for barcode scanning that automatically detects item types and routes them to the appropriate backend (Grocy, Homebox, or future library apps).
 
 ## Features
