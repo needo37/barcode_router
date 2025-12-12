@@ -1,8 +1,6 @@
 {
   "name": "Barcode Router",
   "content_in_root": false,
-  "filename": "barcode_router",
   "homeassistant": "2024.4.0",
-  "render_readme": true,
-  "iot_class": "Local Polling"
+  "render_readme": true
 }
