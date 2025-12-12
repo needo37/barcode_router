@@ -30,6 +30,11 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Unload a config entry."""
     from .const import DOMAIN
-    if DOMAIN in hass.data:
+    
+    if DOMAIN in hass.data and entry.entry_id in hass.data[DOMAIN]:
+        coordinator = hass.data[DOMAIN][entry.entry_id]
+        # Properly shutdown coordinator to close aiohttp sessions and clean up resources
+        await coordinator.async_shutdown()
         hass.data[DOMAIN].pop(entry.entry_id, None)
+    
     return True

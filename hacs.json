@@ -4,6 +4,5 @@
   "filename": "barcode_router",
   "homeassistant": "2024.4.0",
   "render_readme": true,
-  "domains": ["barcode_router"],
   "iot_class": "Local Polling"
 }
